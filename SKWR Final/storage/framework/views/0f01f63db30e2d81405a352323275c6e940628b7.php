@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="small-8 large-8 column">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4> Lastest Post</h4>
+        <?php $__currentLoopData = $news_models; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $news): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>
+        <li id="datatables" hrefclass="list-group-item"> <a href="<?php echo e(url('view_news/random/'.$news->news_id)); ?>"><?php echo e($news->Title); ?></a>
+         </li>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
+      </div>
+    </div>
+  </div>
+</div>
